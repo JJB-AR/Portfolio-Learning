@@ -1,0 +1,64 @@
+body {
+        background-color: rgba(128, 128, 128, 0.292);
+        margin: 0px;
+        padding: 0px;
+        /* all for text */
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        font-size: 15px;
+        letter-spacing: 0px;
+        word-spacing: 2px;
+        color: #000000;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+    }
+
+.text-center {
+    text-align: center;
+}
+
+.text-shadow {
+    text-shadow: -2px 1px 20px #1C6EA4;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.item {
+    padding: 30px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.github-item {
+    border: 1px solid black;
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+}
+
+.image-area {
+    background-color: rgba(128, 128, 128, 0.292);
+    width: 200px;
+    height: 130px;
+}
+
+.image-area img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
