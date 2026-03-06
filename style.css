@@ -1,64 +1,191 @@
+:root {
+    --bg: #f5f7fb;
+    --surface: #ffffff;
+    --text: #1e1e22;
+    --muted: #5f6472;
+    --accent: #2f72d6;
+    --accent-soft: #eaf1ff;
+    --border: #d9deea;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-        background-color: rgba(128, 128, 128, 0.292);
-        margin: 0px;
-        padding: 0px;
-        /* all for text */
-        font-family: "Trebuchet MS", Helvetica, sans-serif;
-        font-size: 15px;
-        letter-spacing: 0px;
-        word-spacing: 2px;
-        color: #000000;
-        font-weight: normal;
-        text-decoration: none;
-        font-style: normal;
-        font-variant: normal;
-        text-transform: none;
-    }
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 35%, #f8f9fc 100%);
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+header {
+    max-width: 1000px;
+    margin: 24px auto 12px;
+    padding: 18px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+h3 {
+    margin-top: 26px;
+}
+
+p,
+ul {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+ul {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+ul li {
+    margin-left: 20px;
+    margin-bottom: 6px;
+}
+
+a {
+    color: var(--accent);
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    opacity: 0.85;
+}
 
 .text-center {
     text-align: center;
 }
 
 .text-shadow {
-    text-shadow: -2px 1px 20px #1C6EA4;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.item {
-    padding: 30px;
-    border: 1px solid black;
-    margin: 10px;
-}
-
-.github-item {
-    border: 1px solid black;
-    margin: 10px;
-    width: 200px;
-    height: 300px;
-}
-
-.image-area {
-    background-color: rgba(128, 128, 128, 0.292);
-    width: 200px;
-    height: 130px;
-}
-
-.image-area img {
-    width: 100px;
-    height: 100px;
-    display: block;
-    margin: 0 auto;
+    text-shadow: 0 3px 10px rgba(47, 114, 214, 0.2);
 }
 
 .nav-list {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 8px 0 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fafcff;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-list a:hover {
+    color: var(--accent);
+    border-color: #b8c8e9;
+    background: var(--accent-soft);
+    transform: translateY(-1px);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 18px auto 48px;
+    padding: 0 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.item,
+.github-item {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+}
+
+.item {
+    padding: 24px;
+    margin: 0;
+}
+
+.github-item {
+    width: 260px;
+    min-height: 300px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.github-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(30, 30, 34, 0.09);
+}
+
+.image-area {
+    background: linear-gradient(180deg, #f7f9ff 0%, #eef2ff 100%);
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.image-area img {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+}
+
+.text-area {
+    padding: 14px;
+}
+
+.text-area p {
+    margin: 0 0 10px;
+}
+
+.text-area p:first-child {
+    font-size: 1.04rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    header {
+        margin: 16px 12px 10px;
+        padding: 16px;
+    }
+
+    p,
+    ul {
+        padding: 0 14px;
+    }
+
+    .github-item {
+        width: 100%;
+        max-width: 340px;
+    }
 }
