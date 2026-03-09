@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to my Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
-
-
 <body>
     <header>
         <h2 class="text-center text-shadow">Welcome to my Portfolio</h2>
@@ -22,15 +19,16 @@
         </nav>
     </header>
 
-        <h3 class="text-center">My Projects</h3>
-        <div class="container">
-            <script type="module">
-                import { createItem } from "./script.js";
-                createItem("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", "GitHub", "This is a sentence", "GitHub Logo");
-                createItem("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", "Visual Basic Portfolio", "This repository has been <br><a href='https://github.com/JJB-AR?tab=repositories#:~:text=Portfolio%2DTemplate%2DVB'>Link</a>", "GitHub Logo");
-                createItem("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", "Python Portfolio", "This repository has been <br><a href='https://github.com/JJB-AR?tab=repositories#:~:text=Portfolio%2DTemplate%2DPython'>Link</a>", "GitHub Logo");
-            </script>
-        </div>
+    <div id="about-section"></div>
+    <div id="projects-section"></div>
+
+    <script type="module">
+        import { renderAbout }    from "./sections/about.js";
+        import { renderProjects } from "./sections/projects.js";
+
+        renderAbout(document.getElementById("about-section"));
+        renderProjects(document.getElementById("projects-section"));
+    </script>
 </body>
 </html>
 
